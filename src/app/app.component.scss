@@ -1,0 +1,182 @@
+.box {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.box1 {
+    background-color: rgb(235, 221, 118);
+}
+
+.box2 {
+    background-color: rgb(128, 224, 192);
+}
+
+.box3 {
+    background-color: rgb(81, 163, 236);
+}
+
+.box4 {
+    background-color: rgb(176, 140, 243);
+}
+
+.box5 {
+    background-color: rgb(235, 138, 180);
+}
+
+button {
+    padding: 10px;
+}
+
+
+
+$pending-color: #9499ab;
+$processing-color: #00d4ab;
+$completed-color: #fff;
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    // .header {
+    //     width: 100%;
+    //     height: 26.7vw;
+    //     background-color: #1f2a49;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+
+    //     .step {
+    //         width: 33.3%;
+    //         height: 100%;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         p {
+    //             font-size: 14px;
+    //             color: $processing-color;
+    //         }
+    //     }
+    // }
+
+    .header {
+        width: 100%;
+        height: 26.7vw;
+        background-color: #1f2a49;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        z-index: -2;
+
+        .icons,
+        .steps,
+        .wordings {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .icons {
+            img {
+                width: 6vw;
+            }
+
+            .icon1 {
+                position: relative;
+                right: 0.75vw;
+            }
+
+            .icon3 {
+                position: relative;
+                left: 0.75vw;
+            }
+        }
+
+        .steps {
+            padding: 4.5vw 0;
+
+            img {
+                width: 3.2vw;
+                position: absolute;
+            }
+
+            .step1 {
+                left: 15vw;
+            }
+
+            .step3 {
+                right: 15vw;
+            }
+
+            .completed-step {
+                width: 5vw;
+                position: absolute;
+            }
+
+            .completed-step1 {
+                left: 14vw;
+            }
+
+            span {
+                position: absolute;
+                width: 31vw;
+                height: 0.35vw;
+                z-index: -1;
+                background-color: $pending-color;
+            }
+
+            .line1 {
+                left: 18vw;
+            }
+
+            .line2 {
+                right: 18vw;
+            }
+
+            .processing-line1 {
+                background-image: linear-gradient(to right, $pending-color, $processing-color);
+            }
+
+            .processing-line2 {
+                background-image: linear-gradient(to right, $processing-color, $pending-color);
+            }
+
+            .processing-line3 {
+                background-image: linear-gradient(to right, $completed-color, $processing-color);
+            }
+
+            .line-completed {
+                background-image: none;
+                background-color: $completed-color;
+            }
+
+        }
+
+        .wordings {
+            p {
+                width: 33.3%;
+                text-align: center;
+                font-size: 3.73vw;
+                color: $pending-color;
+            }
+
+            .processing-wording {
+                color: $processing-color;
+            }
+
+            .wording-completed {
+                color: $completed-color;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
+
+
