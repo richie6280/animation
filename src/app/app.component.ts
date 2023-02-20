@@ -74,30 +74,42 @@ export class AppComponent {
   //   this.pageNumber -= 1;
   // }
 
+  // ngOnInit() {
+  //   this.getStepCondition(this.step);
+  // }
+
   isStep1: boolean = true;
   isStep2: boolean = false;
   isStep3: boolean = false;
 
-  // test: any;
+  imgSrc: any;
 
-  // imgSrc = {
-  //   pageStep1: {
-  //     icon1: '../assets/shopping/icon:step1-2.png',
-  //     icon2: '../assets/shopping/icon:step2-1.png',
-  //     icon3: '../assets/shopping/icon:step3-1.png',
-  //     step1: '../assets/shopping/process:step1-1.png',
-  //     step2: '../assets/shopping/process:step2-3.png',
-  //     step3: '../assets/shopping/process:step3-3.png',
-  //   },
-  //   step2: {
-  //     icon: '../assets/shopping/icon:step1-2.png',
-  //     step: '../assets/shopping/icon:step2-1.png',
-  //   },
-  //   step3: {
-  //     icon: '../assets/shopping/icon:step1-2.png',
-  //     step: '../assets/shopping/icon:step2-1.png',
-  //   }
-  // }
+  assetsImgSrc = {
+    pageStep1: {
+      icon1: '../assets/shopping/icon:step1-2.png',
+      icon2: '../assets/shopping/icon:step2-1.png',
+      icon3: '../assets/shopping/icon:step3-1.png',
+      step1: '../assets/shopping/process:step1-1.png',
+      step2: '../assets/shopping/process:step2-3.png',
+      step3: '../assets/shopping/process:step3-3.png',
+    },
+    pageStep2: {
+      icon1: '../assets/shopping/icon:step1-1.png',
+      icon2: '../assets/shopping/icon:step2-2.png',
+      icon3: '../assets/shopping/icon:step3-1.png',
+      step1: '../assets/shopping/process:step1-2.png',
+      step2: '../assets/shopping/process:step2-1.png',
+      step3: '../assets/shopping/process:step3-3.png',
+    },
+    pageStep3: {
+      icon1: '../assets/shopping/icon:step1-1.png',
+      icon2: '../assets/shopping/icon:step2-3.png',
+      icon3: '../assets/shopping/icon:step3-2.png',
+      step1: '../assets/shopping/process:step1-2.png',
+      step2: '../assets/shopping/process:step2-2.png',
+      step3: '../assets/shopping/process:step3-1.png',
+    },
+  }
 
   nextPage() {
     if (this.step === this.lastPage) return;
@@ -115,6 +127,10 @@ export class AppComponent {
     step === 1 ? this.isStep1 = true : this.isStep1 = false;
     step === 2 ? this.isStep2 = true : this.isStep2 = false;
     step === 3 ? this.isStep3 = true : this.isStep3 = false;
+
+  //  if (step === 1) this.imgSrc = this.assetsImgSrc.pageStep1;
+  //  if (step === 2) this.imgSrc = this.assetsImgSrc.pageStep2;
+  //  if (step === 3) this.imgSrc = this.assetsImgSrc.pageStep3;
   }
 
 
