@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://stage.wellife.flyelephant.com.tw",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  
